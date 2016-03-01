@@ -35,6 +35,6 @@ $profileLine
 
 "@ | Out-File $PROFILE -Append -WhatIf:$WhatIf -Encoding (Get-FileEncoding $PROFILE)
 
-Write-Host "localboy sucessfully installed!"
+Write-Host "pstools sucessfully installed!"
 Write-Host "Please reload your profile for the changes to take effect:"
 Write-Host ". $PROFILE"
