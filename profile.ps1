@@ -5,7 +5,7 @@ Set-Alias vs Start-VisualStudioWithFirstSlnFile
 
 function Get-CurrentRepoName(){
 	$repoPath = git rev-parse --show-toplevel
-	$repoName = [io.path]::GetFileNameWithoutExtension($repoPath)
+	$repoName = [io.path]::GetFileName($repoPath)
 	return $repoName
 }
 
