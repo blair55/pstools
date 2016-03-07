@@ -1,5 +1,5 @@
 function Start-VisualStudioWithFirstSlnFile(){
-    ls *.sln | select -first 1 | %{ ii $_.FullName }
+	ls *.sln | select -first 1 | %{ ii $_.FullName }
 }
 Set-Alias vs Start-VisualStudioWithFirstSlnFile
 
@@ -10,7 +10,7 @@ function Get-CurrentRepoName(){
 }
 
 function Get-CurrentBranchName(){
-  return git rev-parse --abbrev-ref HEAD
+  	return git rev-parse --abbrev-ref HEAD
 }
 
 function Start-BitBucketAtCurrentRepo(){
@@ -22,8 +22,8 @@ Set-Alias bb Start-BitBucketAtCurrentRepo
 
 function Start-GitHubAtCurrentRepo(){
 	$repoName = Get-CurrentRepoName
-  $branchName = Get-CurrentBranchName
+  	$branchName = Get-CurrentBranchName
 	$url = "https://github.com/mediaingenuity/" + $repoName + "/commits/" + $branchName
-	Start-Process "chrome.exe" $url.ToLower()
+	Start-Process "chrome.exe" $url
 }
 Set-Alias gh Start-GitHubAtCurrentRepo
